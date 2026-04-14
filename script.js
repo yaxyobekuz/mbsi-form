@@ -158,8 +158,7 @@ form.addEventListener("submit", async (e) => {
 
     if (result.ok) {
       form.reset();
-      document.getElementById("dir_rus").checked = true;
-      openSuccessModal();
+      document.getElementById("dir_rus").checked = true;      openSuccessModal();
     } else {
       console.error("Telegram error:", result);
       showStatus(

@@ -138,7 +138,7 @@ form.addEventListener("submit", async (e) => {
     `📋 *Yangi ariza*\n\n` +
     `👤 *Ism:* ${escMd(name)}\n` +
     `🎂 *Yosh:* ${escMd(age)}\n` +
-    `📞 *Telefon:* ${escMd(phone)}\n` +
+    `📞 *Telefon:* ${phone.replace(/\s/g, '')}\n` +
     `🎓 *Yo'nalish:* ${escMd(direction)} tili`;
 
   try {

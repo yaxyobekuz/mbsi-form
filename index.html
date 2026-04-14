@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBSI — Ro'yxatdan o'tish</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="card">
+
+  <!-- Logo -->
+  <div class="logo-wrap">
+    <img src="logo.png" alt="MBSI Logo" class="logo-svg" />
+    <span class="brand-name">MBSI</span>
+    <span class="brand-sub">Ro'yxatdan o'tish formasi</span>
+  </div>
+
+  <form id="regForm" novalidate>
+
+    <!-- Ism -->
+    <div class="field">
+      <label for="name">Ism va Familiya</label>
+      <input type="text" id="name" name="name" placeholder="Masalan: Abdullayev Ali" required />
+    </div>
+
+    <!-- Yosh -->
+    <div class="field">
+      <label for="age">Yosh</label>
+      <input type="number" id="age" name="age" placeholder="Masalan: 18" min="5" max="80" required />
+    </div>
+
+    <!-- Telefon -->
+    <div class="field">
+      <label for="phone">Telefon raqam</label>
+      <input type="tel" id="phone" name="phone" placeholder="+998 90 123 45 67" required />
+    </div>
+
+    <!-- Yo'nalish -->
+    <div class="field">
+      <label>Yo'nalish</label>
+      <div class="toggle-group">
+        <input type="radio" id="dir_rus" name="direction" value="Rus" checked />
+        <label for="dir_rus">🇷🇺 Rus tili</label>
+
+        <input type="radio" id="dir_eng" name="direction" value="Ingliz" />
+        <label for="dir_eng">🇬🇧 Ingliz tili</label>
+      </div>
+    </div>
+
+    <button type="submit" class="btn-submit" id="submitBtn">Yuborish</button>
+  </form>
+
+  <div class="status" id="statusMsg"></div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal-box">
+    <div class="modal-confetti" id="confettiCanvas"></div>
+    <div class="modal-icon">
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="40" r="40" fill="url(#g1)"/>
+        <polyline points="22,42 34,54 58,28" stroke="#fff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#1a8cff"/>
+            <stop offset="100%" stop-color="#0044cc"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <h2 class="modal-title">So'rovingiz qabul qilindi!</h2>
+    <p class="modal-text">Tez orada siz bilan bog'lanamiz. Bizning Telegram kanalimizga obuna bo'ling — yangiliklar va e'lonlardan xabardor bo'ling.</p>
+    <a class="modal-tg-btn" href="https://t.me/Mahmudxoja_Behbudiy_maktabi" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 13.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
+      MBSI Telegram Kanaliga O'tish
+    </a>
+    <button class="modal-close" id="modalClose">Yopish</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
